@@ -223,7 +223,12 @@ class Pi08DemoWindow(QMainWindow, Ui_MainWindow):
         msgBoxWidget = QWidget()
         try:
             if self.hidStatus == True:
-                value_int = int(self.lineEdit_value.text(), 16)
+
+                if self.lineEdit_value.text() == '':
+                    QMessageBox.information(msgBoxWidget, "Notification", "Please fill data in value edit")
+                    return
+                else:
+                    value_int = int(self.lineEdit_value.text(), 16)
 
                 dac_ch = self.select_pi08_channel()
 
