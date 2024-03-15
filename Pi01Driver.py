@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2023/9/22 16:32
+# @Author  : yifei.su
+# @File    : tem.py.py
+
 from IfDriver import *
 
 def pi01_set_internal_vref(pBdg, value=True):

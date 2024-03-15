@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2023/9/22 16:32
+# @Author  : yifei.su
+# @File    : tem.py.py
+
 import binascii
 
 from IfDriver import *
@@ -385,23 +390,3 @@ if __name__ == '__main__':
     win.show()
 
     sys.exit(app.exec_())
-
-    # hidDev = hid.device()
-    # hidDev.open(0x1A86, 0xFE07) # open hid
-    # hidDev.set_nonblocking(1)   # hid device enable non-blocking modepp
-    #
-    # hidDev.write([0x0a, 0x09, 0x01, 0x11, 0x00, 0x00, 0x04, 0x08, 0x00, 0x00, 0x01])
-
-    # # """ spi write """
-    # pi08_soft_reset(hidDev)     # reset pi08
-    # pi08_set_ref(hidDev, 0x1)   # select internal vref
-    # pi08_set_channel_output(hidDev, 0xf, 0x9C40)    # set all DAC channel output 0x9C40 (1.456V)
-    #
-    # """ i2c write """
-    # pi01_set_internal_vref(hidDev, True)
-    # pi01_set_adc_gain(hidDev, 1)
-    # pi01_enable_adc(hidDev, 0x01)
-    # print(pi01_read_adc(hidDev))
-
-    # i2c_write(hidDev, 0x20, 0x00, [0x02, 0x01, 0x5A])
-    # print(i2c_read(hidDev, 0x20, 0x00, 2, [0x72]))
